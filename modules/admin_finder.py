@@ -9,7 +9,7 @@ License: GPL 3
 Description:
 	A Simple Admin Finder Module
 
-Established on code of Guy Mizrahi (http://guym.co.il/admin-panel-finder/)"
+Established on code of Guy Mizrahi"
 """
 import urllib2
 import sys

