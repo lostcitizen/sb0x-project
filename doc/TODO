@@ -1,0 +1,9 @@
+TODO:
+
+* Adding threads options in the following modules:
+1. ftp_brute.py
+2. admin_finder.py
+
+* Adding http API lib
+* Adding encrypted API lib (base64, md5, etc..)\
+* Fixinig Bugs (Exception 's bugs)

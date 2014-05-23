@@ -1,0 +1,88 @@
+2014-05-23 Levi Nachamni (levi0x0) <2.0.1rc>
+ * core rewrite from scratch core version 0.7
+ * Added new modules
+ * Fixed  Bugs
+ * First stable Release
+ * API support
+ * New shell
+ * Autocomplete option
+ * New wiki
+ * too many changes to remember (:
+
+2014-03-27 Levi Nachamni (levi0x0)  <1.0.6rc>
+ * core version 0.0.6
+ * new interface
+ * fixed bugs
+ * wordpress brute force 0.2
+ * server scnner 0.1
+ * ms012-20 RDP Windows DOS eXPLOIT 0.5
+ * WEB ADMIN FINDER 0.5
+ * ftp brute force tool v0.4
+ * perl bind shell v0.1
+ * DSL router brute force
+ * NETGEAR Router brute force
+ * Notebook
+ * adding cat
+
+
+2013-09-12 Levi Nachamni (levi0x0)  <1.0.5-4-beta>
+ * core version 0.0.3
+ * new interface
+ * fixed bugs
+ * wordpress brute force 0.1
+ * server scanner 0.1
+ * ms012-20 RDP Windows DOS eXPLOIT 0.1
+ * WEB ADMIN FINDER 0.2
+ * ftp brute force tool v0.4
+ * perl bind shell v0.1
+ * DSL router brute force
+ * NETGEAR Router brute force
+
+
+2013-08-23 Levi Nachamni (levi0x0)  <1.0.5-2/3-beta>
+ * core version 0.0.2
+ * Windows Support
+ *bug #1 Windows Slash Fixed
+ * new interface
+ * fixed bugs
+ * web brute froce 0.1
+ * wordpress brute forcec 0.1
+ * ms012-20 RDP Windows DOS eXPLOIT 0.1
+ * WEB ADMIN FINDER 0.2
+ * ftp brute force tool v0.4
+ * php_reverse_shell 0.1
+ * perl bind shell v0.1
+
+
+
+2013-08-20 Levi Nachamni (levi0x0)  <1.0.5-beta>
+ * New core version 0.0.1
+ * new interface
+ * fixed bugs
+ * web brute froce 0.1
+ * wordpress brute forcec 0.1
+ * ms012-20 RDP Windows DOS eXPLOIT 0.1
+ * WEB ADMIN FINDER 0.2
+ * ftp brute force tool v0.4
+ * php_reverse_shell 0.1
+ * perl bind shell v0.1
+
+
+
+2013-08-01  Levi Nachamni (levi0x0)  <1.0.4-alpha>
+
+ * wordpress brute force
+ * interface
+ * fixed bugs
+  
+
+
+
+2013-07-27  Levi Nachamni (levi0x0)  <1.0.3-alpha>
+
+ * fixed
+
+
+
+2013-06-26  Levi Nachamni (levi0x0)  <1.0.1-alpha>
+ * -Initial release
