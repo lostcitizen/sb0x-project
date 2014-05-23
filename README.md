@@ -42,7 +42,7 @@ for more information Watch the Video Tutorial:
 
 if you are Python Developer Take a look in the API tutorial:
 
-[sb0x-project API Tutorial] (https://github.com/levi0x0/sb0x-project/wiki/API.md)
+[sb0x-project API Tutorial] (https://github.com/levi0x0/sb0x-project/wiki/API)
 
 
 ###How to Install sb0x###
