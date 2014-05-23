@@ -35,7 +35,7 @@ to run the module type his name in the 'load prompt'
 
 for more information Watch the Video Tutorial:
 
-	[Video Tutorial](https://github.com/levi0x0/sb0x-project/wiki/VideoTutorial)
+[Video Tutorial](https://github.com/levi0x0/sb0x-project/wiki/VideoTutorial)
 
 
 ###How To write sb0x Module###
