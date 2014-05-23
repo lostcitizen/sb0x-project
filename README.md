@@ -15,12 +15,14 @@
 
 ###Basic Usage###
 
-`help, ? - print help.
+```
+help, ? - print help.
 
 load - load modules.
 
-exit, q - exit.`
+exit, q - exit.
 
+```
 **for autocomplete use 'TAB'**
 
 **type 'load'**
