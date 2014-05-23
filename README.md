@@ -50,7 +50,7 @@ if you are Python Developer Take a look in the API tutorial:
 **First install python2.7**
 
 
-* Download the sb0x repository: [Download](https://github.com/levi0x0/sb0x-project")
+* Download the sb0x repository: [Download](https://github.com/levi0x0/sb0x-project/archive/master.zip)
 
 * and run sb0x.py
 
