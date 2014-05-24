@@ -40,7 +40,8 @@ class sb0x_shell(object):
 					try:
 						load()
 					except Exception as e:
-						notify(e.message)
+						error(sys.exc_info()[0])
+						error(e.message)
 				elif self.run == "banner":
 					header()
 				elif self.run == "exit" or self.run == "q":

@@ -14,8 +14,7 @@ from importlib import import_module
 import logging
 from api import auto #import auto-complate api module
 from api.std import *#the standart API module
-
-logging.basicConfig(level=logging.DEBUG)
+import sys
 
 DEBUG = 0 #devel mode
 
@@ -99,8 +98,10 @@ def load():
 			try:
 				dump_module_info(run)
 			except KeyError:
+				error(sys.exc_info()[0])
 				error(" info: Failed to dump info for: %s" %(run.replace("info", "")))
 			except Exception as e:
+				error(sys.exc_info()[0])
 				error(e.message)
 			continue
 		elif run:
@@ -122,5 +123,3 @@ def load():
 		except AttributeError as e:
 			error(e.message)
 			continue
-		except Exception as e:
-			logging.debug("[ERROR]")
