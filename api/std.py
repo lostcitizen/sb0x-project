@@ -10,6 +10,7 @@ Description:
 	Basic functions
 
 """
+from os import getcwd as home
 
 #global config
 SB0X_VERSION = "2.0.1rc"
@@ -67,4 +68,6 @@ This API function will clear the screen
 def cles():
 	print("\033[H\033[J")
 
-	
+
+#the current path
+home = home()

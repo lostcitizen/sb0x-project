@@ -7,7 +7,7 @@ Version: 0.1
 License: GPL 3
 
 Description:
-	pishWeeeMan will crearw Phishing Sites Use ettercap for dns_spoof
+	pishWeeeMan will create Phishing Sites you can Use ettercap for dns_spoof
 
 """
 

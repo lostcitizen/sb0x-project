@@ -64,7 +64,7 @@ def main():
 	try:		
 		target = raw_input("* Target IP:")
 		user = raw_input("* User:")
-		pasw = "api/txt%spassword.lst" % (os_slash)
+		pasw = "%s/api/txt%spassword.lst" % (home, os_slash)
 		passwords = raw_input("Password list (Default):") or pasw
 		passwords= open(passwords, "r").readlines()
 		verbose = True

@@ -94,7 +94,7 @@ def main():
 	port = int(raw_input("Port:")) #port
 	key = raw_input("Key: (Example: sb0xbest):") #key like password
 	code = server_code % (target,port,key) #server code 
-	path = "output/%s" % (target)
+	path = "%s/output/%s" % (home, target)
 	if not os.path.exists(path):
 		os.mkdir(path)
 	def rd(length):

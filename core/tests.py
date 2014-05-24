@@ -66,8 +66,9 @@ class tests(object):
 	def test_for_output(self):
 		if not os.path.exists(self.outputdir):
 			print("\033[01;31msb0x-project First time USE.\033[00m")
+			print("[DEBUG] sb0x-project Path: %s" %(self.home))
 			sleep(2)
-			licnese = open("doc/LICENSE").read()
+			licnese = open("%s/doc/LICENSE" %(self.home)).read()
 			print("\033[01;32m%s\033[00m" % (licnese))
 			print("\n\033[01;34mThis software was created for educational purposes ONLY!\033[00m\n")
 			print("\033[01;34mnew user Please Watch the Video tutorial:\nhttps://github.com/levi0x0/sb0x-project/wiki/VideoTutorial\n")
@@ -77,7 +78,10 @@ class tests(object):
 				print("That's it! You are ready to GO.\n\033[00m\n")
 				ask = raw_input("Do you agree? (y/N):")
 				if ask == "y" or ask == "Y" or ask == "yes":
-					os.mkdir(self.outputdir)
+					if "sb0x" in self.outputdir:
+						os.mkdir(self.outputdir)
+					else:
+						print("[ERROR] Path: %s is not sb0x-project path" %(self.outputdir))
 				else:
 					sys.exit()
 			except Exception as e:

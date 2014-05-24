@@ -9,19 +9,25 @@ Version: 0.1
 
 import os 
 import glob
+import sys
 from importlib import import_module
+import logging
 from api import auto #import auto-complate api module
 from api.std import *#the standart API module
+
+logging.basicConfig(level=logging.DEBUG)
+
 DEBUG = 0 #devel mode
+
 """
 	The get modules function returns the modules name
 	And split .py
 	Remove __init__.py from the array
 """
+
 def get_modules():
 		try:
-			home = os.getcwd()
-			os.chdir("modules")
+			os.chdir("%s/modules" %(home))
 			mod_lst = glob.glob("*py")
 			os.chdir(home)
 			lst = []
@@ -79,7 +85,7 @@ def load():
 			counter2 = 0
 			for module in get_modules():
 				counter2 += 1
-				notify("%d. %s" %(counter2, module))
+				notify("\t=> %d. %s" %(counter2, module))
 			continue
 		elif run == "help" or run == "?":
 			help_load()
@@ -93,13 +99,12 @@ def load():
 			try:
 				dump_module_info(run)
 			except KeyError:
-				error(" info: Failed to dump info for: %s" %(run))
-			except ImportError:
-				error("info: Failed to import module: %s." % (run))
-			except AttributeError as e:
+				error(" info: Failed to dump info for: %s" %(run.replace("info", "")))
+			except Exception as e:
 				error(e.message)
 			continue
 		elif run:
+			os.chdir("%s" %(home))
 			module_path = "modules.%s" % (run)
 
 		try:
@@ -113,9 +118,9 @@ def load():
 			init_module.main()
 			del module_path #unload the module
 			continue
-		except ImportError as e:
-				error("Failed to import module: %s." % (run))
-				continue
+			continue
 		except AttributeError as e:
 			error(e.message)
 			continue
+		except Exception as e:
+			logging.debug("[ERROR]")

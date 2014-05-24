@@ -54,11 +54,11 @@ def main():
 		ask = int(raw_input("=> "))
 		print "Hit [ENTER] for Default"
 		if ask == 1:
-			lst = raw_input("Wordlist: (Default)") or "api/txt%saf_php.lst" % (os_slash)
+			lst = raw_input("Wordlist: (Default)") or "%s/api/txt%saf_php.lst" % (home, os_slash)
 		elif ask == 2:
-			lst = raw_input("WorldList: (Default)") or "api/txt%saf_asp.lst" % (os_slash)
+			lst = raw_input("WorldList: (Default)") or "%s/api/txt%saf_asp.lst" % (home, os_slash)
 		elif ask == 3:
-			lst = raw_input("WordList: (Default)") or "api/txt%saf_aspx.lst" % (os_slash)
+			lst = raw_input("WordList: (Default)") or "%s/api/txt%saf_aspx.lst" % (home, os_slash)
 			
 		lst = open(lst, 'rU').readlines()
 	
