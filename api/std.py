@@ -16,7 +16,7 @@ from os import getcwd as home
 SB0X_VERSION = "2.0.1rc"
 SB0X_RELEASE_CODE_NAME = "Dex"
 SB0X_PLATFROM = "linux"
-SB0X_AUTOHR = "Levi Nachamni (levi0x0)"
+SB0X_AUTHOR = "Levi Nachamni (levi0x0)"
 SB0X_LICENSE = "GPL 3"
 SB0X_CURRENT_MAINTAINER = "Levi Nachamni (levi0x0)"
 
