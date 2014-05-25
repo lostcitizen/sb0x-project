@@ -49,8 +49,7 @@ class sb0x_shell(object):
 				elif self.run == "help" or self.run == "?":
 					help();
 				else:
-					notify("[*] X: %s" % (self.run))
-					os.system(self.run)
+					shell(self.run)
 
 
 """

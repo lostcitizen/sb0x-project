@@ -2,19 +2,17 @@
 main.py - General config
 
 Author: Levi Nachamni (levi0x0)
-Date: 20/05/2014
-Version: 0.1
-
 """
 
 import os 
 import glob
 import sys
+import subprocess
 from importlib import import_module
 import logging
 from api import auto #import auto-complate api module
 from api.std import *#the standart API module
-import sys
+
 
 DEBUG = 0 #devel mode
 
@@ -69,6 +67,18 @@ def dump_module_info(module):
  	print "\t=> Module Version: %s" %(info.MODULE_VERSION)
 	print "\t=> Module License: %s" %(info.MODULE_LICENSE)
 	print "\t=> Module Description: %s" %(info.MODULE_DESC)
+
+def shell(execs):
+	"""The sb0xExec shell"""
+	if "cd" in execs:
+		try:
+			os.chdir(execs.replace("cd", "").strip())
+		except Exception as e:
+			pass
+	else:
+		notify("sh: %s" %(execs))
+		subprocess.call(execs, shell=True)
+
 def load():
 	counter = 0
 	while True:
@@ -100,10 +110,11 @@ def load():
 			except KeyError:
 				error(sys.exc_info()[0])
 				error(" info: Failed to dump info for: %s" %(run.replace("info", "")))
+				continue
 			except Exception as e:
 				error(sys.exc_info()[0])
 				error(e.message)
-			continue
+				continue
 		elif run:
 			os.chdir("%s" %(home))
 			module_path = "modules.%s" % (run)
@@ -122,4 +133,7 @@ def load():
 			continue
 		except AttributeError as e:
 			error(e.message)
+			continue
+		except Exception as e:
+			print(e.message)
 			continue
