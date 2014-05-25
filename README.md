@@ -58,7 +58,13 @@ if you are Python Developer Take a look in the API tutorial:
 
 **if You you geting any ERRORs Please report for:** [Issue/Bug](https://github.com/levi0x0/sb0x-project/issues)
 
+###Old Versions###
 
+**sb0x old versions in Sourceforge**
+
+* [sb0x 1.0.5](http://sourceforge.net/projects/sb0xproject/files/1.0.5/)
+
+* [sb0x 1.0.4](http://sourceforge.net/projects/sb0xproject/files/1.0.4/)
 
 ###Contributing###
 
