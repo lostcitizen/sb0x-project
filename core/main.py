@@ -107,13 +107,14 @@ def load():
 		elif "info" in run:
 			try:
 				dump_module_info(run)
+                                continue
 			except KeyError:
 				error(sys.exc_info()[0])
 				error(" info: Failed to dump info for: %s" %(run.replace("info", "")))
 				continue
 			except Exception as e:
 				error(sys.exc_info()[0])
-				error(e.message)
+			        notify("Import error for: %s" % (run))
 				continue
 		elif run:
 			os.chdir("%s" %(home))
@@ -128,8 +129,6 @@ def load():
 				https://github.com/levi0x0/sb0x-project/wiki/API/
 			"""
 			init_module.main()
-			del module_path #unload the module
-			continue
 			continue
 		except AttributeError as e:
 			error(e.message)
