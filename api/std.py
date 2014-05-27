@@ -11,6 +11,8 @@ Description:
 
 """
 from os import getcwd as home
+import random
+import string
 
 #global config
 SB0X_VERSION = "2.0.1rc"
@@ -68,6 +70,12 @@ This API function will clear the screen
 def cles():
 	print("\033[H\033[J")
 
+
+"""
+random_string - the function will create random string
+"""
+def random_string(length):
+   	return ''.join(random.choice(string.lowercase) for i in range(length))
 
 #the current path
 home = home()
