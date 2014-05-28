@@ -8,8 +8,8 @@ import os
 import glob
 import sys
 import subprocess
+from random import choice
 from importlib import import_module
-import logging
 from api import auto #import auto-complate api module
 from api.std import *#the standart API module
 
@@ -39,6 +39,38 @@ def get_modules():
 
 		return lst
 
+
+
+def modules_counter():
+    modules = get_modules()
+    modules_counter = 0
+
+    for i in modules:
+        modules_counter += 1
+
+    return modules_counter
+
+
+def select_random_logo():
+    os.chdir("%s/core/logos/" %(home))
+
+    logos = glob.glob("*logo")
+    alogo = choice(logos)
+
+    logo = open(alogo, "rt").read()
+
+    return logo
+
+logo = select_random_logo()
+
+def header():
+	print "\033[01;32m"
+	print "\t\t+--------------------------------------+"
+	print logo
+	print "\t\t+--------------------------------------+\033[00m\n"
+
+        print "\t\t\033[01;36m:::Version: %s \033[00m\033[01;34mModules: %d:::\033[00m" %(SB0X_VERSION,modules_counter())
+
 def help():
 	notify("Main Options:")
 	notify("\thelp, ? - print help.")
@@ -62,11 +94,11 @@ def dump_module_info(module):
 
 	module_path = "modules.%s" % (module)
 	info = import_module(module_path)
-	print "\t=> Module Name: %s" %(info.MODULE_NAME)
-	print "\t=> Module Author: %s" %(info.MODULE_AUTHOR)
- 	print "\t=> Module Version: %s" %(info.MODULE_VERSION)
-	print "\t=> Module License: %s" %(info.MODULE_LICENSE)
-	print "\t=> Module Description: %s" %(info.MODULE_DESC)
+	notify("\t=> Module Name: %s" %(info.MODULE_NAME))
+	notify("\t=> Module Author: %s" %(info.MODULE_AUTHOR))
+ 	notify("\t=> Module Version: %s" %(info.MODULE_VERSION))
+	notify("\t=> Module License: %s" %(info.MODULE_LICENSE))
+	notify("\t=> Module Description: %s" %(info.MODULE_DESC))
 
 def shell(execs):
 	"""The sb0xExec shell"""
@@ -109,12 +141,12 @@ def load():
 				dump_module_info(run)
                                 continue
 			except KeyError:
-				error(sys.exc_info()[0])
 				error(" info: Failed to dump info for: %s" %(run.replace("info", "")))
 				continue
 			except Exception as e:
-				error(sys.exc_info()[0])
-			        notify("Import error for: %s" % (run))
+                                if DEBUG:
+                                    debug("Module info function.")
+			        error(e.message)
 				continue
 		elif run:
 			os.chdir("%s" %(home))
@@ -134,5 +166,5 @@ def load():
 			error(e.message)
 			continue
 		except Exception as e:
-			print(e.message)
+		        error(e.message)
 			continue

@@ -7,13 +7,20 @@ Date: 20/05/2014
 Version: 0.1
 
 """
-from core.tests import tests, init
-tests = tests()
-tests.test_python_version()
-init()
-tests.test_for_output()
+
 import sys
+import optparse
 import os
+try:
+    from core.tests import tests, init
+    tests = tests()
+    tests.test_python_version()
+    init()
+    tests.test_for_output()
+except Exception as e:
+    print("\033[01;31m[ERROR] %s\033[00m" %(e) )
+    sys.exit(1)
+
 from core.main import *
 import api.auto
 import api.std
@@ -31,7 +38,6 @@ class sb0x_shell(object):
 			self.prompt = "\033[01;35mMain => \033[00m"
 
 		def run(self):
-			notify("  \t\tType 'help' or '?' for help")
 			while True:
 				options_array = options_array_system
 				api.auto.sb0x_complete(options_array)
@@ -63,7 +69,11 @@ def main():
 """
 The While loop is For The Exception
 """
+
 if __name__ == '__main__':
+        parser = optparse.OptionParser(version=SB0X_VERSION)
+        parser.parse_args()
+
 	while True:
 		try:
 			LOOP_COUNT += 1
@@ -76,3 +86,6 @@ if __name__ == '__main__':
 		except EOFError:
 			notify("Ctrl + D Pressed")
 			api.std.quit(0)
+                except Exception as e:
+                    error(e.message)
+                    api.std.quit(1)

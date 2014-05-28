@@ -15,7 +15,7 @@ import random
 import string
 
 #global config
-SB0X_VERSION = "2.0.1rc"
+SB0X_VERSION = "2.0.1rc3"
 SB0X_RELEASE_CODE_NAME = "Dex"
 SB0X_PLATFROM = "linux"
 SB0X_AUTHOR = "Levi Nachamni (levi0x0)"
@@ -26,24 +26,6 @@ SB0X_CURRENT_MAINTAINER = "Levi Nachamni (levi0x0)"
 FIXEME: More nice API (:
 KISS - Keep it Simple S**D
 """
-
-
-MOT="clean, simple, lightweight."
-
-logo = """
-		     __        _      ___       
-		 ____\ \   ___| |__  / _ \__  __
-		|_____\ \ / __| '_ \| | | \ \/ /
-		|_____/ / \__ \ |_) | |_| |>  < 
-		     /_/  |___/_.__/ \___//_/\_\ %s
-			%s
-""" % (SB0X_VERSION, MOT)
-
-def header():
-	print "\033[01;32m"
-	print "\t\t+-----------------------------------+"
-	print logo
-	print "\t\t+-----------------------------------+\n"
 
 def error(message):
 		print "\033[01;31m[ERROR] %s\033[00m" % (message)
